@@ -1,0 +1,81 @@
+// main.scss
+@import 'base';
+@import 'components';
+@import 'header';
+@import 'preview';
+@import 'searchResults';
+@import 'recipe';
+@import 'upload';
+
+// Media queries for smartphones and smaller devices
+@media screen and (max-width: 600px) {
+  // Styles for screens up to 600px wide (smartphones)
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__logo {
+      margin-left: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .search {
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+
+    &__field {
+      width: 20rem;
+    }
+  }
+
+  .nav {
+    margin-right: 1rem;
+  }
+
+  .recipe {
+    &__details {
+      padding: 2rem;
+      flex-wrap: wrap;
+    }
+
+    &__info {
+      margin-bottom: 1rem;
+    }
+
+    &__ingredients,
+    &__directions {
+      padding: 2rem;
+    }
+
+    &__ingredient-list {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .preview {
+    &__link {
+      padding: 1rem;
+      flex-direction: column;
+      align-items: flex-start;
+
+      &:hover {
+        transform: none;
+      }
+    }
+
+    &__fig {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .add-recipe-window {
+    width: 90%;
+    padding: 2rem;
+  }
+
+  .upload {
+    grid-template-columns: 1fr;
+  }
+}
